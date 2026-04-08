@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://1stvcilx8fy1"]
+
+[ext_resource type="Script" uid="uid://bee7cdveg4w7j" path="res://src/TestLevel/Script/test_level.gd" id="1_6jerk"]
+[ext_resource type="PackedScene" uid="uid://d3kn6uett8vb2" path="res://src/Player/Scene/player.tscn" id="2_lm4cy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ftyi"]
+size = Vector2(106, 636)
+
+[node name="testLevel" type="Node2D" unique_id=255644451]
+script = ExtResource("1_6jerk")
+
+[node name="Player" parent="." unique_id=1707971848 instance=ExtResource("2_lm4cy")]
+position = Vector2(623, 295)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1714725905]
+position = Vector2(50, 19)
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D" unique_id=694483619]
+polygon = PackedVector2Array(-67, -2, 41, -4, 42, 639, -69, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1170781703]
+position = Vector2(-12, 318)
+shape = SubResource("RectangleShape2D_1ftyi")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=203780320]
+position = Vector2(1106, -8)
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2" unique_id=781251839]
+polygon = PackedVector2Array(-67, -2, 41, -4, 42, 639, -69, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=232802369]
+position = Vector2(-12, 318)
+shape = SubResource("RectangleShape2D_1ftyi")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=639388933]
+position = Vector2(722, 451.00006)
+rotation = 1.446878
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D3" unique_id=1934636568]
+polygon = PackedVector2Array(-67, -2, 41, -4, 42, 639, -69, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=309244100]
+position = Vector2(-12, 318)
+shape = SubResource("RectangleShape2D_1ftyi")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=89211433]
+position = Vector2(1103, -25.999939)
+rotation = 1.446878
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D4" unique_id=99804098]
+polygon = PackedVector2Array(-67, -2, 41, -4, 42, 639, -69, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1681214212]
+position = Vector2(-12, 318)
+shape = SubResource("RectangleShape2D_1ftyi")
