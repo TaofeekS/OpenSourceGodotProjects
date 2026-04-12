@@ -38,3 +38,21 @@ position = Vector2(576, 624)
 
 [node name="ball" parent="paddle" unique_id=1861127276 instance=ExtResource("2_654te")]
 position = Vector2(0, -36)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=211273785]
+
+[node name="instructionLabel" type="Label" parent="CanvasLayer" unique_id=2089309132]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -202.0
+offset_top = 62.0
+offset_right = 215.0
+offset_bottom = 261.0
+grow_horizontal = 2
+text = "use Movement button to control paddle left and right
+use x to fire"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="gameStarted" from="paddle" to="." method="_on_paddle_game_started"]

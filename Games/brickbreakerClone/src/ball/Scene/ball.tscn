@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ikij8k1rybl7"]
 
 [ext_resource type="Texture2D" uid="uid://dw21qqlnnhx7t" path="res://icon.svg" id="1_3juu5"]
+[ext_resource type="Script" uid="uid://cyx11bh7f1b8d" path="res://src/ball/Script/ball.gd" id="1_p82ai"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p82ai"]
 friction = 0.0
@@ -15,6 +16,7 @@ gravity_scale = 0.0
 continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 4
+script = ExtResource("1_p82ai")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=106157785]
 scale = Vector2(0.3, 0.3)
