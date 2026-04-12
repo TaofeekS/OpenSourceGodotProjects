@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://xfjx8x83l51e"]
+
+[ext_resource type="Script" uid="uid://c8t8w0edl3uj5" path="res://src/TestLevel/Script/test_level.gd" id="1_1ftyi"]
+[ext_resource type="PackedScene" uid="uid://cscrlp8cbv2bj" path="res://src/Paddle/Scene/paddle.tscn" id="1_6jerk"]
+[ext_resource type="PackedScene" uid="uid://ikij8k1rybl7" path="res://src/ball/Scene/ball.tscn" id="2_654te"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jerk"]
+size = Vector2(19, 621)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lm4cy"]
+size = Vector2(1163, 28)
+
+[node name="testLevel" type="Node2D" unique_id=2005189393]
+script = ExtResource("1_1ftyi")
+
+[node name="boundary1" type="StaticBody2D" parent="." unique_id=1582639729]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundary1" unique_id=179057719]
+position = Vector2(-0.5, 300.5)
+shape = SubResource("RectangleShape2D_6jerk")
+
+[node name="boundary2" type="StaticBody2D" parent="." unique_id=1132850490]
+position = Vector2(1147, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundary2" unique_id=1688356145]
+position = Vector2(-0.5, 300.5)
+shape = SubResource("RectangleShape2D_6jerk")
+
+[node name="boundary3" type="StaticBody2D" parent="." unique_id=1687849003]
+position = Vector2(1147, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundary3" unique_id=2029589316]
+position = Vector2(-571.5, 4)
+shape = SubResource("RectangleShape2D_lm4cy")
+
+[node name="paddle" parent="." unique_id=569564983 instance=ExtResource("1_6jerk")]
+position = Vector2(576, 624)
+
+[node name="ball" parent="paddle" unique_id=1861127276 instance=ExtResource("2_654te")]
+position = Vector2(0, -36)

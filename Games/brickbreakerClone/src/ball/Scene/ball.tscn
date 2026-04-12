@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ikij8k1rybl7"]
+
+[ext_resource type="Texture2D" uid="uid://dw21qqlnnhx7t" path="res://icon.svg" id="1_3juu5"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p82ai"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wlqdr"]
+radius = 21.095022
+
+[node name="ball" type="RigidBody2D" unique_id=1861127276]
+physics_material_override = SubResource("PhysicsMaterial_p82ai")
+gravity_scale = 0.0
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=106157785]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_3juu5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2019298793]
+shape = SubResource("CircleShape2D_wlqdr")

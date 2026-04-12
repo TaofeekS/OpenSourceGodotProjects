@@ -6,6 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ftyi"]
 size = Vector2(106, 636)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lm4cy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ftyi"]
+bg_color = Color(2.0214916e-06, 0.7031708, 0.5513571, 1)
+
 [node name="testLevel" type="Node2D" unique_id=255644451]
 script = ExtResource("1_6jerk")
 
@@ -57,3 +62,10 @@ polygon = PackedVector2Array(-67, -2, 41, -4, 42, 639, -69, 640)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1681214212]
 position = Vector2(-12, 318)
 shape = SubResource("RectangleShape2D_1ftyi")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=465962730]
+offset_right = 281.0
+offset_bottom = 50.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_lm4cy")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1ftyi")
+value = 51.14
