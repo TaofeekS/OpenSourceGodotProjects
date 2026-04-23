@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://brd81nxp1wjko"]
+
+[ext_resource type="Script" uid="uid://cpisnurcbli0r" path="res://src/Brick/Script/brick.gd" id="1_yl8ul"]
+[ext_resource type="Script" uid="uid://g38yftifauyj" path="res://src/Resources/BrickData.gd" id="2_xeman"]
+
+[sub_resource type="Resource" id="Resource_2tja1"]
+script = ExtResource("2_xeman")
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xeman"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xeman"]
+size = Vector2(80, 40)
+
+[node name="Brick" type="CharacterBody2D" unique_id=921214298 groups=["brick"]]
+script = ExtResource("1_yl8ul")
+brickData = SubResource("Resource_2tja1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1545458163]
+offset_left = -40.0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+
+[node name="Panel" type="Panel" parent="ColorRect" unique_id=1594568449]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xeman")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1514095771]
+shape = SubResource("RectangleShape2D_xeman")

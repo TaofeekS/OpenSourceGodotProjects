@@ -7,8 +7,12 @@ signal gameStarted
 @export var launch_strength: float = 500.0
 
 @onready var ball: RigidBody2D = $ball
+var defualtYpos
 
 var ball_attached: bool = true
+
+func _ready() -> void:
+	defualtYpos = position.y
 
 func _physics_process(delta: float) -> void:
 	var direction := 0
@@ -32,6 +36,9 @@ func _physics_process(delta: float) -> void:
 	if ball_attached and Input.is_action_just_pressed("fire"):
 		launch_ball()
 		emit_signal("gameStarted")
+	
+	if position.y != defualtYpos:
+		position.y = defualtYpos
 
 
 func launch_ball() -> void:

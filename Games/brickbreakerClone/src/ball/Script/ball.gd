@@ -23,3 +23,9 @@ func _physics_process(delta: float) -> void:
 		dir = dir.normalized()
 	
 	linear_velocity = dir * speed
+
+
+func _on_body_entered(body: Node) -> void:
+	if body.is_in_group("brick"):
+		if body.has_method("takeDamage"):
+			body.takeDamage(1)

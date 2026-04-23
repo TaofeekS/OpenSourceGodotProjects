@@ -3,6 +3,86 @@
 [ext_resource type="Script" uid="uid://c8t8w0edl3uj5" path="res://src/TestLevel/Script/test_level.gd" id="1_1ftyi"]
 [ext_resource type="PackedScene" uid="uid://cscrlp8cbv2bj" path="res://src/Paddle/Scene/paddle.tscn" id="1_6jerk"]
 [ext_resource type="PackedScene" uid="uid://ikij8k1rybl7" path="res://src/ball/Scene/ball.tscn" id="2_654te"]
+[ext_resource type="PackedScene" uid="uid://brd81nxp1wjko" path="res://src/Brick/Scene/brick.tscn" id="2_ye713"]
+[ext_resource type="Script" uid="uid://g38yftifauyj" path="res://src/Resources/BrickData.gd" id="3_xf25v"]
+
+[sub_resource type="Resource" id="Resource_ye713"]
+script = ExtResource("3_xf25v")
+startingHitCount = 2
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_xf25v"]
+script = ExtResource("3_xf25v")
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_ltocp"]
+script = ExtResource("3_xf25v")
+startingHitCount = 3
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_24dtx"]
+script = ExtResource("3_xf25v")
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_ixn8f"]
+script = ExtResource("3_xf25v")
+startingHitCount = 3
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_ry5wy"]
+script = ExtResource("3_xf25v")
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_uu2mw"]
+script = ExtResource("3_xf25v")
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_2qbqn"]
+script = ExtResource("3_xf25v")
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_qt70a"]
+script = ExtResource("3_xf25v")
+startingHitCount = 3
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_d5fo5"]
+script = ExtResource("3_xf25v")
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_q4heo"]
+script = ExtResource("3_xf25v")
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_xps6u"]
+script = ExtResource("3_xf25v")
+startingHitCount = 3
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_ppixj"]
+script = ExtResource("3_xf25v")
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_djai1"]
+script = ExtResource("3_xf25v")
+startingHitCount = 3
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_2u5wi"]
+script = ExtResource("3_xf25v")
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_3wy8b"]
+script = ExtResource("3_xf25v")
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_f1thl"]
+script = ExtResource("3_xf25v")
+metadata/_custom_type_script = "uid://g38yftifauyj"
+
+[sub_resource type="Resource" id="Resource_nfg4r"]
+script = ExtResource("3_xf25v")
+metadata/_custom_type_script = "uid://g38yftifauyj"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jerk"]
 size = Vector2(19, 621)
@@ -12,6 +92,80 @@ size = Vector2(1163, 28)
 
 [node name="testLevel" type="Node2D" unique_id=2005189393]
 script = ExtResource("1_1ftyi")
+
+[node name="brickContainer" type="Node2D" parent="." unique_id=539802008]
+
+[node name="Brick" parent="brickContainer" unique_id=921214298 instance=ExtResource("2_ye713")]
+position = Vector2(431, 250)
+brickData = SubResource("Resource_ye713")
+
+[node name="Brick2" parent="brickContainer" unique_id=1768924212 instance=ExtResource("2_ye713")]
+position = Vector2(511, 250)
+brickData = SubResource("Resource_xf25v")
+
+[node name="Brick3" parent="brickContainer" unique_id=59123080 instance=ExtResource("2_ye713")]
+position = Vector2(470, 290)
+brickData = SubResource("Resource_ltocp")
+
+[node name="Brick4" parent="brickContainer" unique_id=1456252354 instance=ExtResource("2_ye713")]
+position = Vector2(471, 210)
+brickData = SubResource("Resource_24dtx")
+
+[node name="Brick5" parent="brickContainer" unique_id=1467666041 instance=ExtResource("2_ye713")]
+position = Vector2(390, 290)
+brickData = SubResource("Resource_ixn8f")
+
+[node name="Brick6" parent="brickContainer" unique_id=192909468 instance=ExtResource("2_ye713")]
+position = Vector2(351, 250)
+brickData = SubResource("Resource_ry5wy")
+
+[node name="Brick7" parent="brickContainer" unique_id=223089077 instance=ExtResource("2_ye713")]
+position = Vector2(391, 210)
+brickData = SubResource("Resource_uu2mw")
+
+[node name="Brick8" parent="brickContainer" unique_id=1012935243 instance=ExtResource("2_ye713")]
+position = Vector2(551, 210)
+brickData = SubResource("Resource_2qbqn")
+
+[node name="Brick9" parent="brickContainer" unique_id=474911477 instance=ExtResource("2_ye713")]
+position = Vector2(550, 290)
+brickData = SubResource("Resource_qt70a")
+
+[node name="Brick10" parent="brickContainer" unique_id=636836813 instance=ExtResource("2_ye713")]
+position = Vector2(671, 250)
+brickData = SubResource("Resource_d5fo5")
+
+[node name="Brick11" parent="brickContainer" unique_id=830218001 instance=ExtResource("2_ye713")]
+position = Vector2(751, 250)
+brickData = SubResource("Resource_q4heo")
+
+[node name="Brick12" parent="brickContainer" unique_id=84045858 instance=ExtResource("2_ye713")]
+position = Vector2(710, 290)
+brickData = SubResource("Resource_xps6u")
+
+[node name="Brick13" parent="brickContainer" unique_id=1505391386 instance=ExtResource("2_ye713")]
+position = Vector2(711, 210)
+brickData = SubResource("Resource_ppixj")
+
+[node name="Brick14" parent="brickContainer" unique_id=1845048878 instance=ExtResource("2_ye713")]
+position = Vector2(630, 290)
+brickData = SubResource("Resource_djai1")
+
+[node name="Brick15" parent="brickContainer" unique_id=1927058404 instance=ExtResource("2_ye713")]
+position = Vector2(591, 250)
+brickData = SubResource("Resource_2u5wi")
+
+[node name="Brick16" parent="brickContainer" unique_id=648219806 instance=ExtResource("2_ye713")]
+position = Vector2(631, 210)
+brickData = SubResource("Resource_3wy8b")
+
+[node name="Brick17" parent="brickContainer" unique_id=1558255792 instance=ExtResource("2_ye713")]
+position = Vector2(791, 210)
+brickData = SubResource("Resource_f1thl")
+
+[node name="Brick18" parent="brickContainer" unique_id=1388290686 instance=ExtResource("2_ye713")]
+position = Vector2(790, 290)
+brickData = SubResource("Resource_nfg4r")
 
 [node name="boundary1" type="StaticBody2D" parent="." unique_id=1582639729]
 
